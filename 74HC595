@@ -1,0 +1,25 @@
+int big = 2;
+int push = 3;
+int datain = 4;
+int datainput[8]={1,0,1,0,1,0,1,0};
+
+void setup() {
+  pinMode(big,OUTPUT);
+  pinMode(push,OUTPUT);
+  pinMode(datain,OUTPUT);
+}
+
+
+void loop() {
+  digitalWrite(big,LOW);
+  for (int i=0;i<8;i++){
+    putsomething(datainput[i]);
+  }
+  digitalWrite(big,HIGH);
+}
+
+void putsomething(int number){
+  digitalWrite(push,LOW);
+  digitalWrite(datain,number);
+  digitalWrite(push,HIGH);
+}
